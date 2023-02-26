@@ -11,7 +11,7 @@ function reverseArr(arr) {
     right--;
   }
 
-  return arr;
+ return arr;
 }
 
 console.log(reverseArr([10,15,18,19,20, 1 , 2 , 3 , 4]));
