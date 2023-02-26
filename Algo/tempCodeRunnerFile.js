@@ -1,13 +1,22 @@
-let array = [15, 4, 15, 98, 74];
-let left = 0;
-let right = array.length - 1;
+// Initialize the array of numbers
+let array = [12, 12, 41, 54, 74, 135];
 
-while (left > right) {
-  let temp = array[left];
-  array[left] = array[right];
-  array[right] = temp;
-  left++;
-  right--;
+// Initialize an empty array to store duplicates
+let duplicate = {};
+let unique=[]
+// Loop through the array and count the occurrences of each number
+for (let i = 0; i <= array.length - 1; i++) {
+  if (array[i] in duplicate) {
+    duplicate[array[i]] += 1;
+  } else {
+    duplicate[array[i]] = 1;
+  }
+
+  // If the number has occurred more than once, add it to the duplicates array
+  if (duplicate[array[i]] > 1) {
+    unique.push(array[i]);
+  }
 }
 
-console.log(array)
+// Log the duplicates array
+console.log(unique);
