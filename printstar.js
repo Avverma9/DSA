@@ -1,11 +1,9 @@
-let string = "";
-
-for(let i = 1; i <=4; i++) { // external loop
-  for(let j = 1; j <=i; j++) { // internal loop
-    string += "*";
+let star = "";
+for (let i = 1; i <= 10; i++) {
+  for (let j = 1; j <= i; j++) {
+    star += "*";
   }
-  // newline after each row
-  string += "\n";
+  star += "\n";
 }
-// printing the string
-console.log(string);
+
+console.log(star);

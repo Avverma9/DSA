@@ -6,3 +6,11 @@ while(a>0){
 }
 
 console.log(sum);
+
+
+function sumOfDigits(num) {
+    return num.toString().split('').reduce((sum, digit) => sum + parseInt(digit, 10), 0);
+  }
+  
+  console.log(sumOfDigits(456));  // Example: Find the sum of digits in 456
+  
